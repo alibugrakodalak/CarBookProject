@@ -1,0 +1,76 @@
+﻿@model List<ResultGetAllBlogsWithAuthorDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0 font-size-18">Bloglar ve Yazarları</h4>
+
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                            <li class="breadcrumb-item active">Bloglar</li>
+                        </ol>
+                    </div>
+                                
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table id="basic-form" class="table dt-responsive nowrap">
+                            <h4 class="card-title">Bloglar</h4>
+
+                            <thead>
+                                <tr>
+                                    <th>Başlık</th>
+                                    <th>Yazar</th>
+                                    <th>Kategori</th>
+                                    <th>Tarih</th>
+                                    <th>Sil</th>
+                                    <th>Blog</th>
+                                    <th>Yorumlar</th>
+                                </tr>
+                            </thead>
+                                    
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.BlogTitle</td>
+                                        <td>@item.AuthorName</td>
+                                        <td>@item.CategoryName</td>
+                                        <td>@item.CreatedDate</td>
+                                        <td><a class="btn btn-danger btn-rounded" href="/Admin/Blog/RemoveBlog/@item.BlogID">Sil</a></td>
+                                        <td><a class="btn btn-primary btn-rounded" href="/Blog/BlogDetail/@item.BlogID">Görüntüle</a></td>
+                                        <td><a class="btn btn-info btn-rounded" href="/Admin/Comment/Index/@item.BlogID">Aç</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

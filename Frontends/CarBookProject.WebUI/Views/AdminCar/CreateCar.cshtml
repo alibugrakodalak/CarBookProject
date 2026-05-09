@@ -1,0 +1,90 @@
+﻿@model CreateCarDto
+@{
+    ViewData["Title"] = "CreateCar";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0 font-size-18">Yeni Araç Girişi</h4>
+
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                            <li class="breadcrumb-item active">Yeni Araç Oluştur</li>
+                        </ol>
+                    </div>
+                                
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+
+                <div class="card">
+                    <div class="card-body">
+                    
+                        <p class="card-subtitle mb-4">Lütfen Yeni Araç Girişi Yaparken Bilgileri Eksiksiz Doldurunuz..!!</p>
+
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="inputBrandValue">Marka</label>
+                                @Html.DropDownListFor(x=> x.BrandId,(List<SelectListItem>)ViewBag.BrandValues, new {@class = "form-control"})
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputModelValue">Model</label>
+                                <input type="text" class="form-control" asp-for="Model">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="inputCoverImage">Kapak Görseli <i>URL</i></label>
+                                <input type="text" class="form-control" asp-for="CoverImageUrl"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputMainCoverImage">Ana Görsel <i>URL</i></label>
+                                <input type="text" class="form-control" asp-for="MainCoverImageUrl" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputLuggage">Km</label>
+                                <input type="text" class="form-control" asp-for="Mileage" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputFuel">Yakıt Tipi</label>
+                                <input type="text" class="form-control" asp-for="Fuel" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputTransmission">Vites Türü</label>
+                                <input type="text" class="form-control" placeholder="Otomatik / Manuel / Hybrid" asp-for="Transmission" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputSeat">Koltuk Sayısı</label>
+                                <input type="text" class="form-control" asp-for="Seat" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputLuggage">Bagaj Hacmi</label>
+                                <input type="text" class="form-control" placeholder="Litre Olarak Giriniz" asp-for="Luggage" />
+                            </div>
+                            
+                            <button type="submit" class="btn btn-success waves-effect waves-light">Araç Oluştur</button>
+                        </form>
+                    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

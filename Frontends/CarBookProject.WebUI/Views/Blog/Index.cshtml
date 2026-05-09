@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<body>
+
+    @await Component.InvokeAsync("_GetAllBlogsWithAuthorComponentPartial")    
+    
+</body>

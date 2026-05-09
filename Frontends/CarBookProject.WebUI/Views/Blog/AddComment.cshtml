@@ -1,0 +1,27 @@
+﻿<div class="comment-form-wrap pt-5">
+    <h3 class="mb-5">Yorumunuzu Yazınız</h3>
+    <form method="post" asp-action="AddComment" asp-controller="Blog" class="p-5 bg-light">
+
+        <input type="hidden" name="BlogId" value="@ViewBag.BlogId"/>
+
+        <div class="form-group">
+            <label for="name">Adınız </label>
+            <input type="text" name="Name" class="form-control" id="name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Mail Adresiniz </label>
+            <input type="email" name="Email" class="form-control" id="email">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Mesajınız </label>
+            <textarea name="Description" id="message" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Yorum Yap" class="btn py-3 px-4 btn-primary">
+        </div>
+
+    </form>
+</div>

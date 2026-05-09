@@ -1,0 +1,69 @@
+﻿@model List<ResultCarWithBrandDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0 font-size-18">Araçlar</h4>
+
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                            <li class="breadcrumb-item active">Araçlar</li>
+                        </ol>
+                    </div>
+                                
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Araç Listesi</h4>
+
+                        <table id="basic-datatable" class="table dt-responsive nowrap">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Marka</th>
+                                    <th>Yakıt Tipi</th>
+                                    <th>Detaylar</th>
+                                    <th>Güncelle</th>
+                                    <th>Sil</th>
+                                    <th>Özellikler</th>
+                                    <th>Km</th>
+                                </tr>
+                            </thead>
+                                    
+                            <tbody>
+                                @foreach(var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Model</td>
+                                        <td>@item.BrandName</td>
+                                        <td>@item.Fuel</td>
+                                        <td><a class="btn btn-primary btn-rounded" href="/Admin/CarFeatureDetail/Index/@item.CarId">Gör</a></td>
+                                        <td><a class="btn btn-success btn-rounded" href="/AdminCar/UpdateCar/@item.CarId">Güncelle</a></td>
+                                        <td><a class="btn btn-danger btn-rounded" href="/AdminCar/DeleteCar/@item.CarId">Sil</a></td>
+                                        <td><a class="btn btn-warning btn-rounded" href="/Admin/CarFeatureDetail/CreateFeatureByCarId">Ekle</a></td>
+                                        <td>@item.Mileage.ToString("N0", new System.Globalization.CultureInfo("tr-TR"))</td>                                        
+                                    </tr>
+                                }                                
+                            </tbody>
+                        </table>
+                    </div> 
+                </div> 
+            </div>
+        </div>
+
+    </div> 
+</div>
+

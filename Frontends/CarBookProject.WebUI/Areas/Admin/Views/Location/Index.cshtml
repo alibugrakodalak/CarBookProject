@@ -1,0 +1,71 @@
+﻿@model List<ResultLocationDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0 font-size-18">Lokasyonlar</h4>
+
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                            <li class="breadcrumb-item active">Lokasyon</li>
+                        </ol>
+                    </div>
+                                
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table id="basic-form" class="table dt-responsive nowrap">
+                            <h4 class="card-title">Lokasyonlar Bilgileri</h4>
+                            <p class="small">Bu Sayfada Bulunan Lokasyon Bilgileri Araçların Alandığı ve Teslim Edildiği Bölgelerin Verileridir..!!</p>
+
+                            <thead>
+                                <tr>
+                                    <th>Bölge Adı</th>
+                                    <th>Konum</th>
+                                    <th>Güncelle</th>
+                                    <th>Sil</th>
+                                </tr>
+                            </thead>
+                                    
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.LocationName</td>
+                                        <td><a class="btn btn-primary btn-rounded" href="/Admin/Location/LocationDetail/@item.LocationId">Haritada Aç</a></td>
+                                        <td><a class="btn btn-success btn-rounded" href="/Admin/Location/UpdateLocation/@item.LocationId">Güncelle</a></td>
+                                        <td><a class="btn btn-danger btn-rounded" href="/Admin/Location/RemoveLocation/@item.LocationId">Sil</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

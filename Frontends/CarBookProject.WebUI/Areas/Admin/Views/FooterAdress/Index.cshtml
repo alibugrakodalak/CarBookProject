@@ -1,0 +1,70 @@
+﻿@model List<ResultFooterAddressDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0 font-size-18">Alt Adres Alanı</h4>
+
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                            <li class="breadcrumb-item active">Alt Adres</li>
+                        </ol>
+                    </div>
+                                
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Alt Adres Bilgileri</h4>
+                        <p class="card-subtitle mb-4">
+                            Tema Bütünlüğünün Bozulmaması Adına Yalnızca 1 Adet Alt Bilgi Ekleyiniz..!!
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Mail</th>
+                                        <th>Telefon</th>
+                                        <th>Açıklama</th>
+                                        <th>Konum</th>
+                                        <th>Güncelle</th>
+                                        <th>Sil</th>
+                                    </tr>
+                                </thead>
+
+                                
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.FooterMail</td>
+                                            <td>@item.FooterPhoneNumber</td>
+                                            <td>@item.FooterDescription</td>
+                                            <td>@item.FooterLocation</td>
+                                            <td><a class="btn btn-success btn-rounded" href="/Admin/FooterAdress/UpdateFooterAdress/@item.FooterAddressId">Güncelle</a></td>
+                                            <td><a class="btn btn-danger btn-rounded" href="/Admin/FooterAdress/RemoveFooterAdress/@item.FooterAddressId">Sil</a></td>
+                                        </tr>
+                                    }                                    
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

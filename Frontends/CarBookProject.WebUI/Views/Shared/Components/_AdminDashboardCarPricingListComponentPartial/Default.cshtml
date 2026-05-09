@@ -1,0 +1,40 @@
+﻿@model List<ResultGetLast5CarsWithBrandsDto>
+
+<div class="col-xl-6">
+    <div class="card">
+        <div class="card-body">
+
+            <h4 class="card-title">Araçlar</h4>
+            <p class="card-subtitle mb-4 font-size-13">
+                Garaja Eklenen Son 5 Araç ve Bilgileri
+            </p>
+
+            <div class="table-responsive">
+                <table class="table table-centered table-hover table-xl mb-0" id="recent-orders">
+                    <thead>
+                        <tr>
+                            <th class="border-top-0">Marka</th>
+                            <th class="border-top-0">Model</th>
+                            <th class="border-top-0">Yakıt Tipi</th>
+                            <th class="border-top-0">Vites Türü</th>
+                            <th class="border-top-0">Km</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="text-truncate">@item.BrandName</td>
+                                <td class="text-truncate">@item.Model</td>
+                                <td class="text-truncate">@item.Fuel</td>
+                                <td class="text-truncate">@item.Transmission</td>
+                                <td class="text-truncate">@item.Mileage</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div> 
+    </div> 
+</div>

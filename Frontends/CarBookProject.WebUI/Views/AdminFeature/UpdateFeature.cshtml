@@ -1,0 +1,56 @@
+﻿@model UpdateFeatureDto
+
+@{
+    ViewData["Title"] = "UpdateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0 font-size-18">Araç Özellik Güncelleme</h4>
+
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                            <li class="breadcrumb-item active">Özellik Güncelle</li>
+                        </ol>
+                    </div>
+                                
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+
+                <div class="card">
+                    <div class="card-body">
+                    
+                        <p class="card-subtitle mb-4">Lütfen Özellik Güncellemesi Yaparken Bilgileri Eksiksiz Doldurunuz..!!</p>
+
+                        <form method="post">
+
+                            <div class="form-group">
+                                <input type="hidden" asp-for="FeatureId"/>
+                                <label for="inputFeatureName">Özellik Adı</label>
+                                <input type="text" class="form-control" asp-for="FeatureName">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-success waves-effect waves-light">Güncelle</button>
+                        </form>
+                    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+

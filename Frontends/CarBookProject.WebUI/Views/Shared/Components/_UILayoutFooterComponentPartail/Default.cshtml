@@ -1,0 +1,67 @@
+﻿@model List<ResultFooterAddressDto>
+
+@foreach (var item in Model)
+{
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+        
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2"><a href="#" class="logo">KIRALA<span>DUR</span></a></h2>
+                        <p></p>@item.FooterDescription
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                            <li class="ftco-animate"><a href="https://www.x.com/"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.linkedin.com/"><span class="icon-linkedin"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">Hızlı Gezin</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="/About/Index/" class="py-2 d-block">Hakkımızda</a></li>
+                            <li><a href="/Services/Index/" class="py-2 d-block">Hizmetler</a></li>
+                            <li><a href="/Car/Index/" class="py-2 d-block">Araçlar</a></li>
+                            <li><a href="/Pricing/Index/" class="py-2 d-block">Fiyatlar</a></li>
+                            <li><a href="/Contact/Index/" class="py-2 d-block">İletişim</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Hakkımızda</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="/About/Index/" class="py-2 d-block">Sıkça Sorunlanlar</a></li>
+                            <li><a href="/About/Index/" class="py-2 d-block">En Çok Tercih Edilenler</a></li>
+                            <li><a href="/About/Index/" class="py-2 d-block">Sektördeki Yerimiz</a></li>
+                            <li><a href="/About/Index/" class="py-2 d-block">Nasıl Çalışırız</a></li>
+                            <li><a href="/About/Index/" class="py-2 d-block">İletişim</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">İletişim</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">@item.FooterLocation</span></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">@item.FooterPhoneNumber</span></a></li>
+                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">@item.FooterMail</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tüm Hakları Saklıdır | Bu Tasarımın Sahibi <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"> Ali Buğra Kodalak</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+}

@@ -1,0 +1,72 @@
+﻿@model List<ResultServiceDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0 font-size-18">Hizmetlerimiz Alanı</h4>
+
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                            <li class="breadcrumb-item active">Hizmetler</li>
+                        </ol>
+                    </div>
+                                
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table id="basic-form" class="table dt-responsive nowrap">
+                            <h4 class="card-title">Mevcut Hizmetlerimiz</h4>
+
+                            <thead>
+                                <tr>
+                                    <th>Başlık</th>
+                                    <th>Açıklama</th>
+                                    <th>Icon</th>
+                                    <th>Güncelle</th>
+                                    <th>Sil</th>
+                                </tr>
+                            </thead>
+                                    
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.serviceTitle</td>
+                                        <td>@item.serviceDescription</td>
+                                        <td>@item.serviceIconUrl</td>
+                                        <td><a class="btn btn-success btn-rounded" href="/Admin/Service/UpdateService/@item.serviceId">Güncelle</a></td>
+                                        <td><a class="btn btn-danger btn-rounded" href="/Admin/Service/RemoveService/@item.serviceId">Sil</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

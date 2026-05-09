@@ -1,0 +1,70 @@
+﻿@model List<ResultBannerDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0 font-size-18">Ana Sayfa Banner Alanı</h4>
+
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                            <li class="breadcrumb-item active">Banner</li>
+                        </ol>
+                    </div>
+                                
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table id="basic-form" class="table dt-responsive nowrap">
+                            <h4 class="card-title">Banner Alanı Bilgileri</h4>
+
+                            <thead>
+                                <tr>
+                                    <th>Başlık</th>
+                                    <th>Açıklama</th>
+                                    <th>Video Açıklaması</th>
+                                    <th>Video</th>
+                                    <th>Güncelle</th>
+                                    <th>Sil</th>
+                                </tr>
+                            </thead>
+                                    
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.BannerTitle</td>
+                                        <td>@item.BannerDescription</td>
+                                        <td>@item.BannerVideoDescription</td>
+                                        <td><a class="btn btn-primary btn-rounded" href="@item.BannerVideoUrl">İzle</a></td>
+                                        <td><a class="btn btn-success btn-rounded" href="/Admin/Banner/UpdateBanner/@item.BannerId">Güncelle</a></td>
+                                        <td><a class="btn btn-danger btn-rounded" href="/Admin/Banner/RemoveBanner/@item.BannerId">Sil</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+

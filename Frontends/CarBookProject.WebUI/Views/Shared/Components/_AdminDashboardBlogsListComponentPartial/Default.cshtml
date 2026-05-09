@@ -1,0 +1,42 @@
+﻿@model List<ResultGetAllBlogsWithAuthorDto>
+@{
+    int count = 0;
+}
+
+<div class="col-xl-6">
+    <div class="card">
+        <div class="card-body">
+
+            <h4 class="card-title">Mevcut Bloglar</h4>
+            <p class="card-subtitle mb-4 font-size-13">
+                2026 Yılında Yayında Bulunan Yazılarımız
+            </p>
+
+            <div class="table-responsive">
+                <table class="table table-centered table-hover table-xl mb-0" id="recent-orders">
+                    <thead>
+                        <tr>
+                            <th class="border-top-0">#</th>      
+                            <th class="border-top-0">Başlık</th>
+                            <th class="border-top-0">Yazar</th>
+                            <th class="border-top-0">Yayın Tarihi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            count++;
+                            <tr>
+                                <td class="text-truncate">@count</td>
+                                <td class="text-truncate">@item.BlogTitle</td>
+                                <td class="text-truncate">@item.AuthorName</td>
+                                <td class="text-truncate">@item.CreatedDate</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div> 
