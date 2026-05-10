@@ -42,7 +42,7 @@ Yönetim panelinde tüm içerikler kolayca yönetilebilir:
 🧠 Teknik Altyapı & Mimariler
 
 <br/>
- 🧰 AspNet Core 9.0 Web API & MVC
+ 🧰 AspNet Core 8.0 Web API & MVC
 <br/>
  🏗️ Onion Architecture
 <br/>
@@ -61,7 +61,7 @@ gibi modern yazılım yaklaşımlarıyla geliştirildi.
 <br/>
 💻 Kullanılan Teknolojiler
 <br/>
- 🚀 AspNet Core 9.0 – Web API & MVC
+ 🚀 AspNet Core 8.0 – Web API & MVC
 <br/>
  🗄️ MSSQL (Stored Procedure + EF Core – Code First)
 <br/>
