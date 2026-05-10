@@ -27,40 +27,73 @@ KiralaDur; kullanıcıların araç kiralayabildiği, lokasyona göre fiyat karş
 Yönetim panelinde tüm içerikler kolayca yönetilebilir:
 <br/>
  📍 Araçlar
+<br/>
  📍 Lokasyonlar
+<br/>
  📍 Blog Yazıları
+<br/>
  📍 Referanslar
+<br/>
  📍 İstatistik & Dashboard
+<br/>
  📍 Kullanıcı yorumları
 
+<br/>
 🧠 Teknik Altyapı & Mimariler
 
+<br/>
  🧰 AspNet Core 9.0 Web API & MVC
+<br/>
  🏗️ Onion Architecture
+<br/>
  ⚖️ CQRS + Mediator
+<br/>
  🗃️ Repository Pattern
+<br/>
  🔐 JWT Authentication
+<br/>
  📡 SignalR (Canlı veri takibi)
+<br/>
  ✅ FluentValidation
+<br/>
 gibi modern yazılım yaklaşımlarıyla geliştirildi.
 
+<br/>
 💻 Kullanılan Teknolojiler
+<br/>
  🚀 AspNet Core 9.0 – Web API & MVC
+<br/>
  🗄️ MSSQL (Stored Procedure + EF Core – Code First)
+<br/>
  📡 SignalR – Real-Time iletişim
+<br/>
  🔐 JWT – Güvenli kimlik doğrulama
+<br/>
  🧪 Postman – API Testleri
+<br/>
  🌐 HTML, CSS, JS, Bootstrap
+<br/>
  🧅 Onion Architecture
+<br/>
  ⚖️ CQRS
+<br/>
  🧭 Mediator
+<br/>
  🗃️ Repository Design Pattern
 
+<br/>
 🌟 Öne Çıkan Uygulama Özellikleri
+<br/>
  🔍 Lokasyona Göre Filtreleme
+<br/>
  📋 Araç Detay Görüntüleme
+<br/>
  🛠️ Admin Paneli ile Tam Yönetim
+<br/>
  📡 SignalR ile Canlı Veri Akışı
+<br/>
  🔐 JWT ile Güvenli Giriş
+<br/>
  📊 Dashboard & İstatistikler
+<br/>
  🌍 Çok Dilli Kullanım Desteği
